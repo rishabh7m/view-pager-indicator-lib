@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import com.rishabh7m.sample.R;
 import com.rishabh7m.sample.adapters.ViewPagerAdapter;
+import com.rishabh7m.viewpagerindicator.indicators.CircleIndicator;
 
 public class PagerSampleActivity extends AppCompatActivity {
 
@@ -15,6 +16,9 @@ public class PagerSampleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pager_sample);
 
         ViewPager pager = (ViewPager) findViewById(R.id.activity_pager_sample_view_pager);
+        CircleIndicator circleIndicator = (CircleIndicator) findViewById(R.id.circle_indicator);
+
         pager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
+        circleIndicator.setPager(pager);
     }
 }
