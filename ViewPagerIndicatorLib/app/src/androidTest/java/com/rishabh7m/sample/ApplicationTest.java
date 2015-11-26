@@ -1,4 +1,4 @@
-package com.rishabh7m.viewpagerindicatorlib;
+package com.rishabh7m.sample;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
