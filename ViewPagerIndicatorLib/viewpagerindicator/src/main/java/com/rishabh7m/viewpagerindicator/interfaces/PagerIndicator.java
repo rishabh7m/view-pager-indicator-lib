@@ -1,7 +1,8 @@
 package com.rishabh7m.viewpagerindicator.interfaces;
 
-/**
- * Created by rishabh on 26/11/15.
- */
-public class PagerIndicator {
+import android.support.v4.view.ViewPager;
+
+public interface PagerIndicator {
+
+    void setPager(ViewPager pager);
 }
