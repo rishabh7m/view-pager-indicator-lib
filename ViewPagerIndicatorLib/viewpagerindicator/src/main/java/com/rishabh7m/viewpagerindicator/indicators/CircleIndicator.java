@@ -27,10 +27,12 @@ public class CircleIndicator extends LinearLayout implements PagerIndicator {
     private float mRadius = 15;
     private ViewPager.OnPageChangeListener mListener;
     private int mCurrentPos;
+    private int mColor;
 
     public CircleIndicator(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
         mContext = context;
+        mColor = getResources().getColor(R.color.DEFAULT_COLOR);
         setOrientation(LinearLayout.HORIZONTAL);
         setGravity(Gravity.CENTER);
     }
@@ -76,7 +78,7 @@ public class CircleIndicator extends LinearLayout implements PagerIndicator {
             else {
                 textAwesome.setText(getResources().getString(R.string.fa_circle));
             }
-            textAwesome.setTextColor(Color.BLACK);
+            textAwesome.setTextColor(mColor);
             if (i != 0) {
                 params.setMargins(getPixels(15), 0, 0, 0);
             }
@@ -85,6 +87,9 @@ public class CircleIndicator extends LinearLayout implements PagerIndicator {
         }
     }
 
+    public void setColor(int color) {
+        mColor = color;
+    }
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {

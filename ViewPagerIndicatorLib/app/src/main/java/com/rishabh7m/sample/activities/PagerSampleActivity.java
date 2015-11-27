@@ -19,6 +19,8 @@ public class PagerSampleActivity extends AppCompatActivity {
         CircleIndicator circleIndicator = (CircleIndicator) findViewById(R.id.circle_indicator);
 
         pager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
+        circleIndicator.setRadius(8);
+        circleIndicator.setColor(getResources().getColor(R.color.colorAccent));
         circleIndicator.setPager(pager);
     }
 }
