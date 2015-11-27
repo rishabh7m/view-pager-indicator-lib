@@ -28,6 +28,7 @@ public class CircleIndicator extends LinearLayout implements PagerIndicator {
     private ViewPager.OnPageChangeListener mListener;
     private int mCurrentPos;
     private int mColor;
+    private float mSpacing = 15;
 
     public CircleIndicator(Context context, AttributeSet attributeSet) {
         super(context, attributeSet);
@@ -80,7 +81,7 @@ public class CircleIndicator extends LinearLayout implements PagerIndicator {
             }
             textAwesome.setTextColor(mColor);
             if (i != 0) {
-                params.setMargins(getPixels(15), 0, 0, 0);
+                params.setMargins(getPixels(mSpacing), 0, 0, 0);
             }
             textAwesome.setLayoutParams(params);
             addView(textAwesome);
@@ -89,6 +90,10 @@ public class CircleIndicator extends LinearLayout implements PagerIndicator {
 
     public void setColor(int color) {
         mColor = color;
+    }
+
+    public void setSpacing(float spacing) {
+        mSpacing = spacing;
     }
 
     @Override
