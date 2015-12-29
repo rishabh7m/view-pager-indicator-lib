@@ -83,8 +83,7 @@ public class LineIndicator extends LinearLayout implements PagerIndicator {
 
     private void setView() {
         for (int i=0; i<count; i++) {
-            LayoutParams params = new LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
-                    ViewGroup.LayoutParams.WRAP_CONTENT);
+            LayoutParams params = new LayoutParams((int)length, (int)height);
             TextView line = new TextView(getContext());
             line.setId(i);
             line.setLayoutParams(new LayoutParams((int) length, (int) height, 1));
