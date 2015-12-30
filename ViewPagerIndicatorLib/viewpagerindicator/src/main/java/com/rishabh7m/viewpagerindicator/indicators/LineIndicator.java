@@ -94,7 +94,7 @@ public class LineIndicator extends LinearLayout implements PagerIndicator {
                 line.setBackgroundColor(selectedColor);
             }
             if (i != 0) {
-                params.setMargins((int)dimension.dpToPx(spacing), 0, 0, 0);
+                //params.setMargins((int)dimension.dpToPx(spacing), 0, 0, 0);
             }
             line.setLayoutParams(params);
             addView(line);
