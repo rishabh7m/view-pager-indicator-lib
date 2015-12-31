@@ -26,6 +26,11 @@ public class LineIndicator extends LinearLayout implements PagerIndicator {
 
     public LineIndicator(Context context) {
         super(context);
+
+    }
+
+    public LineIndicator(Context context, AttributeSet attrs) {
+        super(context, attrs);
         this.context = context;
         setOrientation(LinearLayout.HORIZONTAL);
         setGravity(Gravity.CENTER);
@@ -36,10 +41,6 @@ public class LineIndicator extends LinearLayout implements PagerIndicator {
         notSelectedColor = Color.parseColor(base);
         length = 30;
         height = 5;
-    }
-
-    public LineIndicator(Context context, AttributeSet attrs) {
-        super(context, attrs);
     }
 
     public LineIndicator(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -94,7 +95,7 @@ public class LineIndicator extends LinearLayout implements PagerIndicator {
                 line.setBackgroundColor(selectedColor);
             }
             if (i != 0) {
-                //params.setMargins((int)dimension.dpToPx(spacing), 0, 0, 0);
+                params.setMargins((int)dimension.dpToPx(spacing), 0, 0, 0);
             }
             line.setLayoutParams(params);
             addView(line);
