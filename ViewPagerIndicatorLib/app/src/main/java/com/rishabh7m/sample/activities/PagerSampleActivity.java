@@ -26,6 +26,7 @@ public class PagerSampleActivity extends AppCompatActivity {
         circleIndicator.setSpacing(5);
         circleIndicator.setPager(pager);*/
 
+        lineIndicator.setSpacing(10);
         lineIndicator.setPager(pager);
     }
 }
