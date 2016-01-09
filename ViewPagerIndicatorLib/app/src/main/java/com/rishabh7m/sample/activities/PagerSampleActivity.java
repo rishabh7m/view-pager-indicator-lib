@@ -27,6 +27,8 @@ public class PagerSampleActivity extends AppCompatActivity {
         circleIndicator.setPager(pager);*/
 
         lineIndicator.setSpacing(10);
+        lineIndicator.setLength(20);
+        lineIndicator.setSelectedColor(getResources().getColor(R.color.colorPrimaryDark));
         lineIndicator.setNotSelectedColor(getResources().getColor(R.color.colorAccent));
         lineIndicator.setPager(pager);
     }
