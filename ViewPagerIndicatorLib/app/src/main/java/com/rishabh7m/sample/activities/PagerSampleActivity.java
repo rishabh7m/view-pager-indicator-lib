@@ -17,14 +17,14 @@ public class PagerSampleActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pager_sample);
 
         ViewPager pager = (ViewPager) findViewById(R.id.activity_pager_sample_view_pager);
-        //CircleIndicator circleIndicator = (CircleIndicator) findViewById(R.id.circle_indicator);
-        LineIndicator lineIndicator = (LineIndicator) findViewById(R.id.circle_indicator);
+        CircleIndicator circleIndicator = (CircleIndicator) findViewById(R.id.circle_indicator);
+        LineIndicator lineIndicator = (LineIndicator) findViewById(R.id.line_indicator);
 
         pager.setAdapter(new ViewPagerAdapter(getSupportFragmentManager()));
-        /*circleIndicator.setRadius(8);
+        circleIndicator.setRadius(8);
         circleIndicator.setColor(getResources().getColor(R.color.colorAccent));
         circleIndicator.setSpacing(5);
-        circleIndicator.setPager(pager);*/
+        circleIndicator.setPager(pager);
 
         lineIndicator.setSpacing(10);
         lineIndicator.setLength(20);
