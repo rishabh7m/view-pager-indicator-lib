@@ -14,8 +14,7 @@ public class IndicatorChooser extends AppCompatActivity implements View.OnClickL
     public static final int CIRCLE_INDICATOR_ID = 0;
     public static final int LINE_INDICATOR_ID = 1;
 
-    public static String CIRCLE_INDICATOR_TAG = "CIRCLE-INDICATOR";
-    public static String LINE_INDICATOR_TAG = "LINE-INDICATOR";
+    public static String CHOOSER_TAG = "CHOOSER-TAG";
 
     private Button circleIndicator, lineIndicator;
 
@@ -45,13 +44,13 @@ public class IndicatorChooser extends AppCompatActivity implements View.OnClickL
 
     private void lineIndicatorOnClick() {
         Intent intent = new Intent(this, PagerSampleActivity.class);
-        intent.putExtra(LINE_INDICATOR_TAG, LINE_INDICATOR_ID);
+        intent.putExtra(CHOOSER_TAG, LINE_INDICATOR_ID);
         startActivity(intent);
     }
 
     private void circleIndicatorOnClick() {
         Intent intent = new Intent(this, PagerSampleActivity.class);
-        intent.putExtra(CIRCLE_INDICATOR_TAG, CIRCLE_INDICATOR_ID);
+        intent.putExtra(CHOOSER_TAG, CIRCLE_INDICATOR_ID);
         startActivity(intent);
     }
 }
