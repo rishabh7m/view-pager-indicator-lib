@@ -8,14 +8,18 @@ import android.widget.LinearLayout;
 import com.rishabh7m.viewpagerindicator.interfaces.PagerIndicator;
 
 public class IconIndicator extends LinearLayout implements PagerIndicator {
-    
+
+    private Context context;
+    private ViewPager pager;
+
     public IconIndicator(Context context, AttributeSet attrs) {
         super(context, attrs);
+        this.context = context;
     }
 
     @Override
     public void setPager(ViewPager pager) {
-
+        this.pager = pager;
     }
 
     @Override
