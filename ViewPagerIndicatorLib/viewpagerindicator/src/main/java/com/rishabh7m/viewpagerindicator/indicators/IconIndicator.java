@@ -7,10 +7,16 @@ import android.widget.LinearLayout;
 
 import com.rishabh7m.viewpagerindicator.interfaces.PagerIndicator;
 
+import java.util.HashMap;
+
 public class IconIndicator extends LinearLayout implements PagerIndicator {
 
     private Context context;
     private ViewPager pager;
+    private int count;
+    private int width, height;
+    private int spacing;
+    private HashMap<Integer, Integer> mappings;
 
     public IconIndicator(Context context, AttributeSet attrs) {
         super(context, attrs);
